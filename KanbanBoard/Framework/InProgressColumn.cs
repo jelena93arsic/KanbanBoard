@@ -13,9 +13,9 @@ namespace KanbanBoard.Framework
         public static IWebElement FindColumn()
         {
             IWebElement board = Driver.Instance.FindElement(By.ClassName("hRBsWH"));
-            IWebElement inProgressColumn = board.FindElement(By.ClassName("fxWvvr"));
+            var inProgressColumn = board.FindElements(By.ClassName("fxWvvr"));
 
-            return inProgressColumn;
+            return inProgressColumn[1];
         }
 
         /// <summary>

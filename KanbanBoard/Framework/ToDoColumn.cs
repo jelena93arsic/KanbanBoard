@@ -15,8 +15,9 @@ namespace KanbanBoard.Framework
         public static IWebElement FindColumn()
         {
             IWebElement board = Driver.Instance.FindElement(By.ClassName("hRBsWH"));
-            IWebElement toDoColumn = board.FindElement(By.ClassName("fxWvvr"));
-            return toDoColumn;
+            var toDoColumn = board.FindElements(By.ClassName("fxWvvr"));
+
+            return toDoColumn[0];
         }
 
         /// <summary>
@@ -126,12 +127,11 @@ namespace KanbanBoard.Framework
             try
             {
                 IWebElement inProgressSection = InProgressColumn.FindTicketsSection();
-                IWebElement toDoSection = FindTicketsSection();
-                IWebElement textField = FindTicketsSection().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk>div:nth-child(1)>div"));
+                IWebElement textField = FindTicketsSection().FindElement(By.ClassName("KfkWX"));
                 textField.Click();
 
                 Actions action = new Actions(Driver.Instance);
-                action.ClickAndHold(toDoSection).Build().Perform();
+                action.ClickAndHold(textField).Build().Perform();
                 Thread.Sleep(1000);
                 action.MoveToElement(inProgressSection).Build().Perform();
                 Thread.Sleep(1000);
