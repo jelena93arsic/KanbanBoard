@@ -14,8 +14,8 @@ namespace KanbanBoard.Framework
         /// <returns></returns>
         public static IWebElement FindColumn()
         {
-            IWebElement board = Driver.Instance.FindElement(By.CssSelector("#root>div>div>div"));
-            IWebElement toDoColumn = board.FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)"));
+            IWebElement board = Driver.Instance.FindElement(By.ClassName("hRBsWH"));
+            IWebElement toDoColumn = board.FindElement(By.ClassName("fxWvvr"));
             return toDoColumn;
         }
 
@@ -25,7 +25,8 @@ namespace KanbanBoard.Framework
         /// <returns></returns>
         public static IWebElement FindTicketsSection()
         {
-            IWebElement ticketSection = FindColumn().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk"));
+            IWebElement ticketSection = FindColumn().FindElement(By.ClassName("gmvgXk"));
+            
             return ticketSection;
         }
 
@@ -36,7 +37,7 @@ namespace KanbanBoard.Framework
         {
             try
             {
-                IWebElement addButton = FindColumn().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-AxheI.dNrDWH>button"));
+                IWebElement addButton = FindColumn().FindElement(By.ClassName("hvJMgY"));
                 addButton.Click();
                 Thread.Sleep(2000);
             }
@@ -91,8 +92,8 @@ namespace KanbanBoard.Framework
         /// <returns></returns>
         public static int CountTickets()
         {
-            IWebElement numberField = FindColumn().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-AxheI.dNrDWH>div"));
-            int number = Convert.ToInt32(numberField.Text.Substring(1, 1));
+            var numberFields = Driver.Instance.FindElements(By.ClassName("dteCCc"));
+            int number = Convert.ToInt32(numberFields[0].Text.Substring(1, 1));
 
             return number;
         }
