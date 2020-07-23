@@ -32,7 +32,7 @@ namespace KanbanBoard.Tests
         {
             try
             {
-                IWebElement pageHeader = Driver.Instance.FindElement(By.CssSelector("#root>div>header>h1"));
+                IWebElement pageHeader = Driver.Instance.FindElement(By.ClassName("hLgJkJ"));
                 if (pageHeader.Text == "Kanban Board")
                 {
                     Console.WriteLine("Kanban Board is opened.");
