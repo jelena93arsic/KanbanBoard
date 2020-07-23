@@ -107,10 +107,10 @@ namespace KanbanBoard.Framework
             {
                 IWebElement textField = FindTicketsSection().FindElement(By.ClassName("jOSNSb"));
                 textField.Click();
+                Thread.Sleep(1000);
 
-                IWebElement deleteButton = Driver.Instance.FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk>div:nth-child(1)>div>button"));
+                IWebElement deleteButton = Driver.Instance.FindElement(By.ClassName("eSbheu"));
                 deleteButton.Click();
-                
             }
             catch (Exception ex)
             {
