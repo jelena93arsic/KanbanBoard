@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Floyd\\Desktop\\Gomboc\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj": {}
+    "C:\\Users\\Floyd\\Source\\Repos\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Floyd\\Desktop\\Gomboc\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj": {
+    "C:\\Users\\Floyd\\Source\\Repos\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Floyd\\Desktop\\Gomboc\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj",
+        "projectUniqueName": "C:\\Users\\Floyd\\Source\\Repos\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj",
         "projectName": "KanbanBoard",
-        "projectPath": "C:\\Users\\Floyd\\Desktop\\Gomboc\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj",
+        "projectPath": "C:\\Users\\Floyd\\Source\\Repos\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj",
         "packagesPath": "C:\\Users\\Floyd\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Floyd\\Desktop\\Gomboc\\KanbanBoard\\KanbanBoard\\obj\\",
+        "outputPath": "C:\\Users\\Floyd\\Source\\Repos\\KanbanBoard\\KanbanBoard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "H:\\Microsoft\\Xamarin\\NuGet\\"

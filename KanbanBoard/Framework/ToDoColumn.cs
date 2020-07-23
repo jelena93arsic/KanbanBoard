@@ -123,26 +123,17 @@ namespace KanbanBoard.Framework
         {
             try
             {
+                IWebElement inProgressSection = InProgressColumn.FindTicketsSection();
+                IWebElement toDoSection = FindTicketsSection();
                 IWebElement textField = FindTicketsSection().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk>div:nth-child(1)>div"));
                 textField.Click();
-                //IWebElement textField = FindTicketsSection().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk>div:nth-child(1)>div"));
-                //textField.Click();
-                //IWebElement test = InProgressColumn.FindTicketsSection();
-                IWebElement from = Driver.Instance.FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk"));
-                //from.Click();
-                IWebElement to = Driver.Instance.FindElement(By.CssSelector("#root>div>div>div>div:nth-child(2)>div.sc-fzoLsD.bmXcrz"));
+
                 Actions action = new Actions(Driver.Instance);
-                action.ClickAndHold(from).Build().Perform();
+                action.ClickAndHold(toDoSection).Build().Perform();
                 Thread.Sleep(1000);
-                action.MoveToElement(to).Build().Perform();
-                //Thread.Sleep(1000);
-                //action.MoveByOffset(-1, -1).Build().Perform();
+                action.MoveToElement(inProgressSection).Build().Perform();
                 Thread.Sleep(1000);
                 action.Release().Build().Perform();
-
-                //var dragAndDrop = builder.DragAndDrop(textField, InProgressColumn.FindTicketsSection()).Build();
-                //var dragAndDrop = builder.ClickAndHold(textField).MoveToElement(test).Release(textField).Build();
-                //dragAndDrop.Perform();
             }
             catch (Exception ex)
             {

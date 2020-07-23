@@ -24,8 +24,6 @@ namespace KanbanBoard.Framework
         public static IWebElement FindTicketsSection()
         {
             IWebElement ticketSection = FindColumn().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(2)>div.sc-fzoLsD.bmXcrz"));
-            //IWebElement ticketSection = FindColumn().FindElement(By.XPath("/html/body/div/div/div/div/div[2]/div[2]"));
-           // IWebElement ticketSection = FindColumn().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(2)>div.sc-fzoLsD.cpDAOV"));
 
             return ticketSection;
         }

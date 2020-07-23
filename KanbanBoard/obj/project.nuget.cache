@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8t4GeLcmXjUxh48tNPaD/GcD0+ihfVbO66dXEGEF05ruukuuqtJr1zaGxQ0/R11ujeWHBE2q4wFzRZAfbJJY8g==",
+  "dgSpecHash": "8J0ED/aHfUpI1JpxmYY6S2j6VO3Afrngmu87r+fsxJjfAt/keFRRP7GcxhJWM6/17Gm4XvniimCR8iP950W16g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Floyd\\Desktop\\Gomboc\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj",
+  "projectFilePath": "C:\\Users\\Floyd\\Source\\Repos\\KanbanBoard\\KanbanBoard\\KanbanBoard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Floyd\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\Floyd\\.nuget\\packages\\log4net\\2.0.8\\log4net.2.0.8.nupkg.sha512",

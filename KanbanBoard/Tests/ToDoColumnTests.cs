@@ -30,13 +30,14 @@ namespace KanbanBoard.Tests
                         isTestPassed = true;
                         Console.WriteLine("Test passed.");
                     }
+                    else
+                        Console.WriteLine("Test failed.");
                 }
             }
             catch (Exception ex)
             {
                 asserMsg = ex.Message;
                 Console.WriteLine(asserMsg);
-                Console.WriteLine("Test failed.");
             }
             finally
             {
@@ -68,13 +69,14 @@ namespace KanbanBoard.Tests
                         isTestPassed = true;
                         Console.WriteLine("Test passed.");
                     }
+                    else
+                        Console.WriteLine("Test failed.");
                 }
             }
             catch (Exception ex)
             {
                 asserMsg = ex.Message;
                 Console.WriteLine(asserMsg);
-                Console.WriteLine("Test failed.");
             }
             finally
             {
@@ -108,13 +110,14 @@ namespace KanbanBoard.Tests
                         isTestPassed = true;
                         Console.WriteLine("Test passed.");
                     }
+                    else
+                        Console.WriteLine("Test failed.");
                 }
             }
             catch (Exception ex)
             {
                 asserMsg = ex.Message;
                 Console.WriteLine(asserMsg);
-                Console.WriteLine("Test failed.");
             }
             finally
             {
@@ -149,6 +152,11 @@ namespace KanbanBoard.Tests
                     {
                         isTestPassed = true;
                         Console.WriteLine("Test passed.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Drag and drop is not performed.");
+                        Console.WriteLine("Test failed.");
                     }
                 }
             }
