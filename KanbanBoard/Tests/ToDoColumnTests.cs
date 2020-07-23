@@ -111,7 +111,10 @@ namespace KanbanBoard.Tests
                         Console.WriteLine("Test passed.");
                     }
                     else
+                    {
+                        Console.WriteLine("Delete option is not working.");
                         Console.WriteLine("Test failed.");
+                    }
                 }
             }
             catch (Exception ex)
@@ -164,7 +167,6 @@ namespace KanbanBoard.Tests
             {
                 asserMsg = ex.Message;
                 Console.WriteLine(asserMsg);
-                Console.WriteLine("Test failed.");
             }
             finally
             {

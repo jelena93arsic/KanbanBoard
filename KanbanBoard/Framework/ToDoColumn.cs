@@ -55,10 +55,10 @@ namespace KanbanBoard.Framework
         {
             try
             {
-                IWebElement textField = FindTicketsSection().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk>div:nth-child(1)>div"));
+                IWebElement textField = FindTicketsSection().FindElement(By.ClassName("jOSNSb"));
                 textField.Click();
-                Thread.Sleep(2000);
                 textField.SendKeys(text);
+                Thread.Sleep(1000);
             }
             catch (Exception ex)
             {
@@ -75,7 +75,7 @@ namespace KanbanBoard.Framework
             bool check = false;
             try
             {
-                IWebElement textField = FindTicketsSection().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk>div:nth-child(1)>div"));
+                IWebElement textField = FindTicketsSection().FindElement(By.ClassName("jOSNSb"));
                 check = textField.Text == text;
             }
             catch (Exception ex)
@@ -105,11 +105,12 @@ namespace KanbanBoard.Framework
         {
             try
             {
-                IWebElement textField = FindTicketsSection().FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk>div:nth-child(1)>div"));
+                IWebElement textField = FindTicketsSection().FindElement(By.ClassName("jOSNSb"));
                 textField.Click();
 
-                IWebElement deleteButton = textField.FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk>div:nth-child(1)>div>button"));
+                IWebElement deleteButton = Driver.Instance.FindElement(By.CssSelector("#root>div>div>div>div:nth-child(1)>div.sc-fzoLsD.gmvgXk>div:nth-child(1)>div>button"));
                 deleteButton.Click();
+                
             }
             catch (Exception ex)
             {
